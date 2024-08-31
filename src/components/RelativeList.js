@@ -10,9 +10,11 @@ const RelativeList = () => {
     ];
 
   return (
-    <ol key="relativeList">
+    <ol  id="relativeList">
       {relatives.map((relative) => (
-        <li key={relatives.key}>{relative.name}</li>
+       <li key={relative.key} id={relative.key}>
+ {relative.name}
+ </li>
       ))}
     </ol>
   );
