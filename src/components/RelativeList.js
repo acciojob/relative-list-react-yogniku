@@ -1,12 +1,18 @@
 import React from 'react';
 
 const RelativeList = () => {
-  const relatives = ['Uncle', 'Aunt', 'Cousin', 'Grandparents', 'Siblings'];
+  const relatives = [
+    { key: 'relativeListItem1', name: 'Amit Uncle' },
+    {key:'RelativeListItem1',name:'Aunt' },
+    {key:'RelativeListItem1' ,name:'Cousin'},
+     {key:'RelativeListItem1' ,name:'Grandparents'},
+     {key:'RelativeListItem1',name:'Siblings'}
+    ];
 
   return (
     <ol key="relativeList">
-      {relatives.map((relative, index) => (
-        <li key={`relativeListItem${index + 1}`}>{relative}</li>
+      {relatives.map((relative) => (
+        <li key={relatives.key}>{relative.name}</li>
       ))}
     </ol>
   );
